@@ -29,7 +29,7 @@
 
   body {
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-    background: var(--white);
+    background: var(--black);
     color: var(--ink);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -156,18 +156,18 @@
 
   /* Stat strip */
   .stat-strip {
-    max-width: var(--max); margin: 0 auto; padding: 0 32px;
-    transform: translateY(-1px);
+    max-width: var(--max); margin: 52px auto 0; padding: 0 32px;
   }
   .stat-strip-inner {
-    background: var(--black);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 34px 16px;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+    padding: 30px 0;
   }
   .stat {
     text-align: center;
-    padding: 0 12px;
+    padding: 0 20px;
     border-right: 1px solid var(--line-dark);
   }
   .stat:last-child { border-right: none; }
@@ -409,7 +409,6 @@
           <p>From a newly renovated fitness center to complimentary hot breakfast, every amenity is designed around your comfort.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="https://www.wyndhamhotels.com/ramada/maryland-heights-missouri/elimwood-hotel-a-ramada/rooms-rates?brand_id=RA&amp;checkInDate=9/5/2026&amp;checkOutDate=9/6/2026&amp;useWRPoints=false&amp;children=0&amp;adults=1&amp;rooms=1&amp;loc=ChIJiVgUkMMt34cRIpYoRdNP3zc&amp;sessionId=1788645686" target="_blank" rel="noopener">Book Now</a>
-            <a class="btn btn-outline" href="/our-hotel">Back to Our Hotel</a>
           </div>
         </div>
       </div>
@@ -460,23 +459,6 @@
   </section>
 
   <!-- Amenities at a glance -->
-  <section class="why">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">At a Glance</span>
-        <h2>Amenities built around your stay.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item"><span class="why-num">I</span><h3>Free Hot Breakfast</h3><p>Served daily, 6:30–9:30 AM weekdays and 7:00–9:30 AM weekends.</p></div>
-        <div class="why-item"><span class="why-num">II</span><h3>24-Hr Fitness Center</h3><p>Cardio and strength equipment, open around the clock.</p></div>
-        <div class="why-item"><span class="why-num">III</span><h3>24-Hr Business Center</h3><p>Computers, printers, and a dedicated work area.</p></div>
-        <div class="why-item"><span class="why-num">IV</span><h3>Free WiFi Throughout</h3><p>High-speed internet in every room and shared space.</p></div>
-        <div class="why-item"><span class="why-num">V</span><h3>Pet-Friendly Rooms</h3><p>Pets 35 lbs. or under welcome for a small nightly fee.</p></div>
-        <div class="why-item"><span class="why-num">VI</span><h3>Guest Laundry</h3><p>Full laundry facilities on site for longer stays.</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Detail lists -->
   <section class="list-columns">
     <div class="wrap" style="display:grid; grid-template-columns:repeat(3,1fr); gap:48px;">

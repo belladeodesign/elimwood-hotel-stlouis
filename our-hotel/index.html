@@ -29,7 +29,7 @@
 
   body {
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-    background: var(--white);
+    background: var(--black);
     color: var(--ink);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -156,18 +156,18 @@
 
   /* Stat strip */
   .stat-strip {
-    max-width: var(--max); margin: 0 auto; padding: 0 32px;
-    transform: translateY(-1px);
+    max-width: var(--max); margin: 52px auto 0; padding: 0 32px;
   }
   .stat-strip-inner {
-    background: var(--black);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 34px 16px;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+    padding: 30px 0;
   }
   .stat {
     text-align: center;
-    padding: 0 12px;
+    padding: 0 20px;
     border-right: 1px solid var(--line-dark);
   }
   .stat:last-child { border-right: none; }
@@ -194,25 +194,30 @@
   .story .eyebrow { color: var(--gold); }
 
   /* Why guests love staying */
-  .why { background: var(--black); padding: 110px 0; }
-  .section-head { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+  .why { background: var(--black); padding: 100px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
   .section-head h2 { font-size: 2.3rem; }
   .why .section-head h2 { color: var(--white); }
+  .why .eyebrow { color: var(--gold); }
 
   .why-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px 40px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border-top: 1px solid var(--line-dark);
   }
-  .why-item { text-align: left; }
-  .why-num {
-    font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
-    font-style: italic;
-    font-size: 1.8rem;
-    color: var(--gold);
-    margin-bottom: 16px;
-    display: block;
+  .why-item {
+    text-align: left;
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--line-dark);
   }
-  .why-item h3 { font-size: 1.25rem; margin-bottom: 10px; font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: var(--white); }
-  .why-item p { color: rgba(255,255,255,0.66); font-size: 0.95rem; max-width: 34ch; }
+  .why-item:nth-child(odd) { border-right: 1px solid var(--line-dark); }
+  .why-num { display: none; }
+  .why-item h3 {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 1.05rem; margin-bottom: 8px;
+    font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: var(--white);
+  }
+  .why-item h3::before { content: ""; width: 16px; height: 1px; background: var(--gold); flex-shrink: 0; }
+  .why-item p { color: rgba(255,255,255,0.62); font-size: 0.9rem; max-width: 38ch; margin-left: 28px; }
 
   /* Highlights (Property / Amenities / Attractions) */
   .highlights { padding: 110px 0; background: var(--black); }
@@ -329,6 +334,7 @@
   }
   @media (max-width: 560px) {
     .why-grid { grid-template-columns: 1fr; }
+    .why-item:nth-child(odd) { border-right: none; }
     .hero-media .hero-frame { height: 68vh; min-height: 460px; }
     .hero-top { padding: 0 20px 48px; }
     .cta { padding: 64px 24px; }
@@ -405,11 +411,10 @@
         <div class="hero-scrim"></div>
         <div class="hero-top">
           <span class="eyebrow">Our Hotel</span>
-          <h1>A Newly Renovated Stay in the Heart of Riverport</h1>
+          <h1>A Newly Renovated Stay in Riverport</h1>
           <p>Convenient to the I-70 / I-270 interchange and nestled in the Riverport Business Complex, seven miles west of St. Louis Lambert International Airport.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="https://www.wyndhamhotels.com/ramada/maryland-heights-missouri/elimwood-hotel-a-ramada/rooms-rates?brand_id=RA&amp;checkInDate=9/5/2026&amp;checkOutDate=9/6/2026&amp;useWRPoints=false&amp;children=0&amp;adults=1&amp;rooms=1&amp;loc=ChIJiVgUkMMt34cRIpYoRdNP3zc&amp;sessionId=1788645686" target="_blank" rel="noopener">Book Now</a>
-            <a class="btn btn-outline" href="/our-hotel/amenities">View Amenities</a>
           </div>
         </div>
       </div>

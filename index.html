@@ -174,22 +174,23 @@
   .stat span { font-size: 0.76rem; color: rgba(255,255,255,0.68); letter-spacing: 0.05em; text-transform: uppercase; }
 
   /* Story */
-  .story { padding: 110px 0 100px; }
+  .story { padding: 110px 0 100px; background: var(--black); }
   .story-grid {
     display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: center;
   }
   .story-media img { width: 100%; height: 460px; object-fit: cover; }
-  .story-text h2 { font-size: 2.3rem; margin-bottom: 22px; }
-  .story-text p { color: var(--ink-soft); font-size: 1.02rem; margin-bottom: 20px; max-width: 48ch; }
+  .story-text h2 { font-size: 2.3rem; margin-bottom: 22px; color: var(--white); }
+  .story-text p { color: rgba(255,255,255,0.68); font-size: 1.02rem; margin-bottom: 20px; max-width: 48ch; }
   .story-quote {
     border-left: 2px solid var(--gold);
     padding-left: 22px;
     font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
     font-size: 1.35rem;
-    color: var(--ink);
+    color: var(--white);
     margin-top: 30px;
   }
+  .story .eyebrow { color: var(--gold); }
 
   /* Why guests love staying */
   .why { background: var(--black); padding: 110px 0; }
@@ -213,7 +214,9 @@
   .why-item p { color: rgba(255,255,255,0.66); font-size: 0.95rem; max-width: 34ch; }
 
   /* Highlights (Property / Amenities / Attractions) */
-  .highlights { padding: 110px 0; }
+  .highlights { padding: 110px 0; background: var(--black); }
+  .highlights .section-head h2 { color: var(--white); }
+  .highlights .eyebrow { color: var(--gold); }
   .highlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
   .highlight-card {
     background: var(--white);
@@ -235,13 +238,14 @@
   .highlight-link:hover { color: var(--gold); }
 
   /* Gallery */
-  .gallery { background: var(--white); padding: 110px 0; }
+  .gallery { background: var(--black); padding: 110px 0; }
+  .gallery .eyebrow { color: var(--gold); }
   .gallery-head {
     display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 16px;
   }
-  .gallery-head h2 { font-size: 2.3rem; }
-  .gallery-head a { font-weight: 600; font-size: 0.78rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gold-deep); }
-  .gallery-head a:hover { color: var(--gold); }
+  .gallery-head h2 { font-size: 2.3rem; color: var(--white); }
+  .gallery-head a { font-weight: 600; font-size: 0.78rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gold); }
+  .gallery-head a:hover { color: var(--gold-soft); }
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -253,21 +257,22 @@
   .gallery-grid .g-wide { grid-column: span 2; }
 
   /* Location / travel times */
-  .location { padding: 110px 0; background: var(--white); }
+  .location { padding: 110px 0; background: var(--black); }
+  .location .eyebrow { color: var(--gold); }
   .location-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
   }
   .location-media img { width: 100%; height: 420px; object-fit: cover; }
-  .location-text h2 { font-size: 2.2rem; margin-bottom: 18px; }
-  .location-text > p { color: var(--ink-soft); margin-bottom: 34px; max-width: 46ch; }
+  .location-text h2 { font-size: 2.2rem; margin-bottom: 18px; color: var(--white); }
+  .location-text > p { color: rgba(255,255,255,0.68); margin-bottom: 34px; max-width: 46ch; }
   .travel-list { display: flex; flex-direction: column; }
   .travel-row {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 18px 0; border-bottom: 1px solid var(--line);
+    padding: 18px 0; border-bottom: 1px solid var(--line-dark);
   }
-  .travel-row:first-child { border-top: 1px solid var(--line); }
-  .travel-row .place { font-weight: 500; letter-spacing: 0.02em; }
-  .travel-row .time { font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.3rem; color: var(--gold-deep); }
+  .travel-row:first-child { border-top: 1px solid var(--line-dark); }
+  .travel-row .place { font-weight: 500; letter-spacing: 0.02em; color: rgba(255,255,255,0.85); }
+  .travel-row .time { font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.3rem; color: var(--gold); }
 
   /* CTA */
   .cta {
